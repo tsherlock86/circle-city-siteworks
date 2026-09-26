@@ -1,4 +1,4 @@
-const EMAIL_RE = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const clean = (value, max = 4000) => String(value || "").trim().slice(0, max);
 const escapeHtml = (value) => value.replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
 
@@ -10,7 +10,7 @@ export async function POST(request) {
     if (!name || !EMAIL_RE.test(email) || !details) return Response.json({ error: "Please complete your name, email, and project details." }, { status: 400 });
     if (!process.env.RESEND_API_KEY) return Response.json({ error: "The quote form is temporarily unavailable." }, { status: 500 });
 
-    const text = ["New Circle City Siteworks quote request","","Name: "+name,"Business: "+(business || "Not provided"),"Email: "+email,"Project: "+project,"","Project details:",details].join("\\n");
+    const text = ["New Circle City Siteworks quote request","","Name: "+name,"Business: "+(business || "Not provided"),"Email: "+email,"Project: "+project,"","Project details:",details].join("\n");
     const html = `<h2>New quote request</h2><p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Business:</strong> ${escapeHtml(business || "Not provided")}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Project:</strong> ${escapeHtml(project)}</p><p><strong>Project details:</strong></p><p style="white-space:pre-wrap">${escapeHtml(details)}</p>`;
 
     const resend = await fetch("https://api.resend.com/emails", {
