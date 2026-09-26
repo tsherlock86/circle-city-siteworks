@@ -70,6 +70,8 @@ export default function Home() {
       </div>
     </section>
 
+    <section id="work" className="work section"><div className="wrap workInner"><div><p className="eyebrow">Built to solve real problems</p><h2>MORE THAN<br/>A TEMPLATE.</h2></div><p>Need something unusual? That's where Circle City Siteworks shines. If your business has a process held together by spreadsheets, manual steps, or disconnected tools, we can talk about turning it into something better.</p></div></section>
+
     <section id="pricing" className="pricing section pricingPhoto">
       <div className="wrap">
         <p className="eyebrow">Simple starting points</p>
@@ -88,8 +90,6 @@ export default function Home() {
       <p className="eyebrow">How it works</p><div className="sectionHead"><h2>NO MYSTERY.<br/>NO RUNAROUND.</h2><p>You tell us the problem. We define the scope, build it, and make sure you know how to use what you paid for.</p></div>
       <div className="steps"><div><b>01</b><h3>Tell us what you need</h3><p>Send the basics. Existing site, new idea, store, or custom workflow.</p></div><div><b>02</b><h3>Get a clear scope</h3><p>We recommend the right approach and price before work begins.</p></div><div><b>03</b><h3>We build it</h3><p>Responsive, practical, and designed around your business.</p></div><div><b>04</b><h3>Launch & handoff</h3><p>We connect your domain and show you how to manage your site.</p></div></div>
     </section>
-
-    <section id="work" className="work section"><div className="wrap workInner"><div><p className="eyebrow">Built to solve real problems</p><h2>MORE THAN<br/>A TEMPLATE.</h2></div><p>Need something unusual? That's where Circle City Siteworks shines. If your business has a process held together by spreadsheets, manual steps, or disconnected tools, we can talk about turning it into something better.</p></div></section>
 
     <section id="quote" className="quote section"><div className="wrap quoteGrid">
       <div><p className="eyebrow">Let's build something useful</p><h2>GET A FREE<br/>PROJECT QUOTE.</h2><p>Tell us what your business needs. We'll recommend an approach and give you a clear price before work begins.</p></div>
