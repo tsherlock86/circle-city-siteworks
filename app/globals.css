@@ -16,3 +16,13 @@
 .cityCaption b{display:block;font-family:"Barlow Condensed";font-size:25px;line-height:1;color:var(--navy);letter-spacing:.05em}
 .cityCaption span{display:block;margin-top:4px;font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--rust)}
 @media(max-width:850px){.cityMark{margin:0 auto;width:min(430px,90vw)}}
+
+/* Simplified Indianapolis hero stamp */
+.heroStamp{position:relative;width:min(470px,100%);height:430px;margin-left:auto;display:flex;align-items:center;justify-content:center}
+.stampCircle{width:290px;height:290px;border:34px solid var(--rust);border-radius:50%;display:grid;place-items:center;transform:rotate(-5deg);background:var(--cream);box-shadow:inset 0 0 0 3px var(--navy)}
+.stampCircle span{font-family:"Barlow Condensed";font-weight:900;font-size:112px;line-height:1;color:var(--navy);letter-spacing:-.05em}
+.stampWords{position:absolute;right:-10px;bottom:48px;background:var(--navy);color:var(--cream);padding:17px 22px 14px;transform:rotate(2deg);box-shadow:8px 8px 0 var(--rust)}
+.stampWords b{font-family:"Barlow Condensed";font-size:31px;line-height:.9;letter-spacing:.03em}
+.stampWords span{display:block;margin-top:8px;color:#f0b29c;font-size:9px;font-weight:800;letter-spacing:.13em}
+.stampLine{position:absolute;width:180px;height:3px;background:var(--blue);left:2px;top:73px;transform:rotate(-7deg)}
+@media(max-width:850px){.heroStamp{margin:0 auto;height:380px;width:min(430px,92vw)}.stampWords{right:0}}
