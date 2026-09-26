@@ -57,7 +57,6 @@ export default function Home() {
           </div>
           <div className="resultTag"><b>WEB + COMMERCE</b><span>Designed around the business.</span></div>
         </div>
-        </div>
       </div>
     </section>
 
