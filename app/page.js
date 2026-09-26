@@ -1,4 +1,4 @@
-const Check = () => <span className="check">✓</span>;
+import QuoteForm from "./QuoteForm";\n\nconst Check = () => <span className="check">✓</span>;
 
 const plans = [
   {
@@ -93,14 +93,7 @@ export default function Home() {
 
     <section id="quote" className="quote section"><div className="wrap quoteGrid">
       <div><p className="eyebrow">Let's build something useful</p><h2>GET A FREE<br/>PROJECT QUOTE.</h2><p>Tell us what your business needs. We'll recommend an approach and give you a clear price before work begins.</p></div>
-      <form action="mailto:" method="post" encType="text/plain">
-        <label>Name<input name="name" required placeholder="Your name"/></label>
-        <label>Business<input name="business" placeholder="Business name"/></label>
-        <label>Email<input name="email" type="email" required placeholder="you@business.com"/></label>
-        <label>What do you need?<select name="project"><option>Business website</option><option>Online store</option><option>Custom solution</option><option>Not sure yet</option></select></label>
-        <label className="wide">Tell us about the project<textarea name="details" rows="5" placeholder="What are you trying to build or improve?"/></label>
-        <button className="button wide" type="submit">Request My Free Quote</button>
-      </form>
+      <QuoteForm/>
     </div></section>
 
     <footer className="siteFooter">
