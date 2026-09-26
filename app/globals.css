@@ -66,3 +66,5 @@
 .formStatus{margin:0;padding:12px 14px;font-weight:700;background:rgba(255,255,255,.14);border-left:4px solid #fff}
 .formStatus.success{background:rgba(6,45,80,.25)}
 .formStatus.error{background:rgba(80,0,0,.22)}
+
+.turnstileWrap{min-height:65px;display:flex;align-items:center}
