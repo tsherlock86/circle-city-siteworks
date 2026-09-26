@@ -103,6 +103,18 @@ export default function Home() {
       </form>
     </div></section>
 
-    <footer><div className="wrap footer"><div className="brand"><span>Circle City</span><small>Siteworks</small></div><p>Modern websites and business tools for Indianapolis and beyond.</p><a href="#quote">Get a Quote ↑</a></div></footer>
+    <footer className="siteFooter">
+      <div className="wrap footerTop">
+        <div className="footerIntro">
+          <a className="brand footerBrand" href="#"><span>Circle City</span><small>Siteworks</small></a>
+          <p>Websites, online stores, and custom business tools built for Indianapolis businesses and beyond.</p>
+          <a className="button small" href="#quote">Start a Project</a>
+        </div>
+        <div className="footerLinks"><h4>Explore</h4><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How It Works</a><a href="#work">Custom Solutions</a></div>
+        <div className="footerLinks"><h4>Services</h4><span>Business Websites</span><span>Online Stores</span><span>Custom Tools</span><span>Automation & Integrations</span></div>
+        <div className="footerLocal"><p className="eyebrow">Circle City · Indianapolis</p><h3>BUILT LOCAL.<br/>BUILT TO WORK.</h3><p>Practical digital tools without the agency runaround.</p></div>
+      </div>
+      <div className="wrap footerBottom"><span>© 2026 Circle City Siteworks</span><span>Indianapolis, Indiana</span><a href="#quote">Get a Free Quote ↑</a></div>
+    </footer>
   </main>;
 }
