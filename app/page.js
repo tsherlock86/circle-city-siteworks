@@ -44,19 +44,11 @@ export default function Home() {
           <p className="lead">Modern websites, online stores, and custom business tools built for small businesses that need more than a pretty homepage.</p>
           <div className="actions"><a className="button" href="#quote">Get a Free Project Quote</a><a className="textLink" href="#services">See what we build →</a></div>
         </div>
-        <div className="cityMark" aria-hidden="true">
-          <div className="cityRing">
-            <div className="mapGrid">
-              <i className="road r1"></i><i className="road r2"></i><i className="road r3"></i>
-              <i className="road r4"></i><i className="road r5"></i><i className="road r6"></i>
-              <i className="road diagonal"></i>
-            </div>
-          </div>
-          <span className="draftLabel top">39.7684° N</span>
-          <span className="draftLabel side">86.1581° W</span>
-          <span className="draftCross cross1">+</span>
-          <span className="draftCross cross2">+</span>
-          <div className="cityCaption"><b>CIRCLE CITY</b><span>INDIANAPOLIS · INDIANA</span></div>
+        <div className="heroStamp" aria-hidden="true">
+          <div className="stampCircle"><span>317</span></div>
+          <div className="stampWords"><b>BUILT IN<br/>INDIANAPOLIS</b><span>WEB · COMMERCE · SYSTEMS</span></div>
+          <div className="stampLine"></div>
+        </div>
         </div>
       </div>
     </section>
