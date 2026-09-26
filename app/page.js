@@ -35,7 +35,7 @@ export default function Home() {
       <a className="button small" href="#quote">Get a Free Quote</a>
     </nav>
 
-    <section className="hero">
+    <section className="hero heroPhoto">
       <div className="streetmark" aria-hidden="true"><div className="ring"></div><div className="roads"></div></div>
       <div className="wrap heroGrid">
         <div>
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section id="pricing" className="pricing section">
+    <section id="pricing" className="pricing section pricingPhoto">
       <div className="wrap">
         <p className="eyebrow">Simple starting points</p>
         <div className="sectionHead"><h2>START WHERE<br/>YOU NEED.</h2><p>No confusing page-count ladder. We scope the project around what your business actually needs.</p></div>
