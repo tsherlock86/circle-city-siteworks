@@ -1,4 +1,6 @@
-import QuoteForm from "./QuoteForm";\n\nconst Check = () => <span className="check">✓</span>;
+import QuoteForm from "./QuoteForm";
+
+const Check = () => <span className="check">✓</span>;
 
 const plans = [
   {
