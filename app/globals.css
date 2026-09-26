@@ -26,3 +26,16 @@
 .stampWords span{display:block;margin-top:8px;color:#f0b29c;font-size:9px;font-weight:800;letter-spacing:.13em}
 .stampLine{position:absolute;width:180px;height:3px;background:var(--blue);left:2px;top:73px;transform:rotate(-7deg)}
 @media(max-width:850px){.heroStamp{margin:0 auto;height:380px;width:min(430px,92vw)}.stampWords{right:0}}
+
+/* Business website showcase */
+.browserShowcase{position:relative;width:min(540px,100%);height:480px;margin-left:auto}
+.browserBack,.browserFront{position:absolute;border:3px solid var(--navy);background:#f8f3e9;box-shadow:10px 10px 0 rgba(6,45,80,.12)}
+.browserBack{width:72%;height:66%;right:-8%;top:3%;transform:rotate(3deg);opacity:.72}
+.browserFront{width:88%;height:75%;left:0;top:14%;transform:rotate(-1deg);box-shadow:12px 12px 0 var(--rust)}
+.browserBar{height:34px;border-bottom:2px solid var(--navy);display:flex;align-items:center;gap:6px;padding:0 10px;background:#e9e1d4}
+.browserBar i{width:7px;height:7px;border:1px solid var(--navy);border-radius:50%}.browserBar b{margin-left:8px;font-size:9px;letter-spacing:.08em;color:var(--navy)}
+.siteNav{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid #d2c6b5;font-size:9px;color:var(--navy)}.siteNav strong{font-family:"Barlow Condensed";font-size:15px;letter-spacing:.05em}
+.siteMock{padding:28px 30px}.siteMock small{color:var(--rust);font-weight:800;letter-spacing:.13em;font-size:8px}.siteMock h3{font-family:"Barlow Condensed";font-size:45px;line-height:.84;margin:10px 0;color:var(--navy)}.siteMock h3 em{font-style:normal;color:var(--rust)}.siteMock p{font-size:12px;margin:0 0 18px}.siteMock button{border:0;background:var(--rust);color:#fff;padding:10px 14px;font-family:inherit;font-size:9px;font-weight:800}
+.dashSidebar{position:absolute;left:0;top:34px;bottom:0;width:25%;background:var(--navy)}.dashContent{margin:32px 22px 20px 32%;display:grid;grid-template-columns:1fr 1fr;gap:12px}.dashContent span{height:68px;border:2px solid rgba(6,45,80,.55);background:repeating-linear-gradient(0deg,#efe7da 0 9px,#d9cdbc 10px 11px)}
+.resultTag{position:absolute;right:-2%;bottom:0;background:var(--navy);color:#fff;padding:14px 18px;border-left:6px solid var(--rust);transform:rotate(1deg)}.resultTag b{display:block;font-family:"Barlow Condensed";font-size:20px;letter-spacing:.05em}.resultTag span{font-size:10px;opacity:.8}
+@media(max-width:850px){.browserShowcase{margin:0 auto;width:min(520px,94vw);height:450px}.browserBack{right:0}.resultTag{right:0}}
