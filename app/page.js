@@ -44,10 +44,18 @@ export default function Home() {
           <p className="lead">Modern websites, online stores, and custom business tools built for small businesses that need more than a pretty homepage.</p>
           <div className="actions"><a className="button" href="#quote">Get a Free Project Quote</a><a className="textLink" href="#services">See what we build →</a></div>
         </div>
-        <div className="heroStamp" aria-hidden="true">
-          <div className="stampCircle"><span>317</span></div>
-          <div className="stampWords"><b>BUILT IN<br/>INDIANAPOLIS</b><span>WEB · COMMERCE · SYSTEMS</span></div>
-          <div className="stampLine"></div>
+        <div className="browserShowcase" aria-hidden="true">
+          <div className="browserBack">
+            <div className="browserBar"><i></i><i></i><i></i></div>
+            <div className="dashSidebar"></div>
+            <div className="dashContent"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div className="browserFront">
+            <div className="browserBar"><i></i><i></i><i></i><b>yourbusiness.com</b></div>
+            <div className="siteNav"><strong>YOUR BUSINESS</strong><span>Services&nbsp;&nbsp; Work&nbsp;&nbsp; Contact</span></div>
+            <div className="siteMock"><small>LOCAL. PROFESSIONAL. READY TO WORK.</small><h3>BUILT TO<br/>BRING IN<br/><em>BUSINESS.</em></h3><p>Clear message. Strong design. Easy next step.</p><button>GET A QUOTE</button></div>
+          </div>
+          <div className="resultTag"><b>WEB + COMMERCE</b><span>Designed around the business.</span></div>
         </div>
         </div>
       </div>
