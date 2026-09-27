@@ -138,3 +138,43 @@ body.modalOpen{overflow:hidden}
   .caseStudyActions{align-items:stretch;flex-direction:column}
   .caseStudyActions .button,.caseStudyActions .outline{width:100%;text-align:center}
 }
+
+
+/* FAQ */
+.faq{background:var(--cream);border-bottom:1px solid var(--line)}
+.faqHead{margin-bottom:36px}
+.faqList{border-top:2px solid var(--navy)}
+.faqItem{border-bottom:1px solid var(--line)}
+.faqItem summary{list-style:none;display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:18px;padding:22px 8px;cursor:pointer;color:var(--navy);font-family:"Barlow Condensed";font-size:27px;font-weight:800;text-transform:uppercase}
+.faqItem summary::-webkit-details-marker{display:none}
+.faqItem summary span{color:var(--rust);font-size:17px;letter-spacing:.08em}
+.faqItem summary:after{content:"+";font-family:Barlow,Arial,sans-serif;font-size:30px;font-weight:500;color:var(--rust);line-height:1}
+.faqItem[open] summary:after{content:"−"}
+.faqItem p{max-width:850px;margin:0 0 24px 80px;padding-right:30px;font-size:17px;line-height:1.65}
+.faqItem summary:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.footerBottom .footerLegal{margin-left:0;color:rgba(248,243,233,.7);text-transform:none;letter-spacing:0;font-weight:600}
+
+/* Privacy page */
+.legalPage{min-height:100vh;background:var(--cream)}
+.legalNav{border-bottom:1px solid var(--line)}
+.legalHero{padding:86px 0 50px;background:var(--navy);color:#fff;border-bottom:8px solid var(--rust)}
+.legalHero .eyebrow{color:#f0b29c}
+.legalHero h1{font-family:"Barlow Condensed";font-size:clamp(58px,8vw,96px);line-height:.9;margin:12px 0 18px;text-transform:uppercase}
+.legalHero p{max-width:720px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.78)}
+.legalContent{padding:72px 0 100px;max-width:850px}
+.legalContent h2{font-family:"Barlow Condensed";font-size:34px;line-height:1;text-transform:uppercase;color:var(--navy);margin:46px 0 12px}
+.legalContent h2:first-child{margin-top:0}
+.legalContent p,.legalContent li{font-size:17px;line-height:1.7}
+.legalContent ul{padding-left:22px}
+.legalContent a{color:var(--rust);font-weight:700}
+.legalNote{padding:18px 20px;background:#e9e1d4;border-left:5px solid var(--rust)}
+.legalFooter{background:var(--navy);color:#fff;padding:28px 0}
+.legalFooter .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.legalFooter a{color:#fff;text-decoration:none;font-weight:700}
+@media(max-width:650px){
+  .faqItem summary{grid-template-columns:38px 1fr auto;font-size:22px;padding:20px 0;gap:10px}
+  .faqItem p{margin-left:48px;padding-right:0}
+  .legalHero{padding:60px 0 38px}
+  .legalContent{padding:52px 0 72px}
+  .legalFooter .wrap{align-items:flex-start;flex-direction:column}
+}
