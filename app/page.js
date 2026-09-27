@@ -31,6 +31,41 @@ const plans = [
 ];
 
 
+const faqs = [
+  {
+    question: "How long does a website take?",
+    answer: "A straightforward business website can often be completed in a few weeks once content, feedback, and approvals are moving. Stores and custom systems usually take longer. The expected schedule is included in the project scope before work begins.",
+  },
+  {
+    question: "Will I own and control my website?",
+    answer: "The handoff and ownership details are spelled out before work begins. The goal is to leave you with a site and accounts you can actually manage, not trap your business inside a proprietary system you cannot access.",
+  },
+  {
+    question: "Can you work with my existing website?",
+    answer: "Yes. Depending on what you already have, we can improve the current site, rebuild it, move it to a better platform, or keep the parts that are already working.",
+  },
+  {
+    question: "Do you build Shopify stores?",
+    answer: "Yes. Online-store projects can include Shopify setup, products and collections, checkout, payments, shipping or local pickup, discounts, email signup, and training.",
+  },
+  {
+    question: "Are there monthly fees?",
+    answer: "Circle City Siteworks does not require a monthly maintenance plan for a standard project unless your scope says otherwise. Third-party costs such as your domain, hosting, Shopify plan, paid apps, or other services can still apply.",
+  },
+  {
+    question: "What happens after launch?",
+    answer: "Launch assistance and handoff are included. Ongoing updates, maintenance, hosting help, and continued development can be added afterward if you want them.",
+  },
+  {
+    question: "Can you build something that is not listed here?",
+    answer: "Yes. Custom work can include internal tools, inventory systems, dashboards, customer portals, integrations, automations, databases, APIs, and unusual business workflows.",
+  },
+  {
+    question: "How does payment work?",
+    answer: "The price and payment schedule are agreed on before work starts. Larger or custom projects may be split into a deposit and project milestones instead of one payment.",
+  },
+];
+
 const projects = [
   {
     title: "Circle City Cleanup",
@@ -143,6 +178,22 @@ export default function Home() {
       </div>
     </section>
 
+    <section id="faq" className="faq section">
+      <div className="wrap">
+        <p className="eyebrow">Common questions</p>
+        <div className="sectionHead faqHead">
+          <h2>BEFORE WE<br/>GET STARTED.</h2>
+          <p>Clear answers to the things most businesses want to know before requesting a quote.</p>
+        </div>
+        <div className="faqList">
+          {faqs.map((faq, index) => <details className="faqItem" key={faq.question}>
+            <summary><span>{String(index + 1).padStart(2, "0")}</span>{faq.question}</summary>
+            <p>{faq.answer}</p>
+          </details>)}
+        </div>
+      </div>
+    </section>
+
     <section id="process" className="section wrap">
       <p className="eyebrow">How it works</p><div className="sectionHead"><h2>NO MYSTERY.<br/>NO RUNAROUND.</h2><p>You tell us the problem. We define the scope, build it, and make sure you know how to use what you paid for.</p></div>
       <div className="steps"><div><b>01</b><h3>Tell us what you need</h3><p>Send the basics. Existing site, new idea, store, or custom workflow.</p></div><div><b>02</b><h3>Get a clear scope</h3><p>We recommend the right approach and price before work begins.</p></div><div><b>03</b><h3>We build it</h3><p>Responsive, practical, and designed around your business.</p></div><div><b>04</b><h3>Launch & handoff</h3><p>We connect your domain and show you how to manage your site.</p></div></div>
@@ -164,11 +215,11 @@ export default function Home() {
           </div>
           <a className="button small" href="#quote">Start a Project</a>
         </div>
-        <div className="footerLinks"><h4>Explore</h4><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How It Works</a><a href="#work">Custom Solutions</a></div>
+        <div className="footerLinks"><h4>Explore</h4><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How It Works</a><a href="#work">Work</a><a href="#faq">FAQ</a><a href="/privacy">Privacy</a></div>
         <div className="footerLinks"><h4>Services</h4><span>Business Websites</span><span>Online Stores</span><span>Custom Tools</span><span>Automation & Integrations</span></div>
         <div className="footerLocal"><p className="eyebrow">Circle City · Indianapolis</p><h3>BUILT LOCAL.<br/>BUILT TO WORK.</h3><p>Practical digital tools without the agency runaround.</p><a className="footerEmail" href="mailto:hello@circlecitysiteworks.com">Email Circle City Siteworks →</a></div>
       </div>
-      <div className="wrap footerBottom"><span>© 2026 Circle City Siteworks</span><span>Indianapolis, Indiana</span><a href="#quote">Get a Free Quote ↑</a></div>
+      <div className="wrap footerBottom"><span>© 2026 Circle City Siteworks</span><span>Indianapolis, Indiana</span><a className="footerLegal" href="/privacy">Privacy Policy</a><a href="#quote">Get a Free Quote ↑</a></div>
     </footer>
   </main>;
 }
