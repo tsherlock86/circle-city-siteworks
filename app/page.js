@@ -1,4 +1,5 @@
 import QuoteForm from "./QuoteForm";
+import Portfolio from "./Portfolio";
 
 const Check = () => <span className="check">✓</span>;
 
@@ -38,6 +39,10 @@ const projects = [
     alt: "Circle City Cleanup website with an Indianapolis junk-removal quote form",
     copy: "A service-business website built to turn local traffic into cleanup and junk-removal quote requests across the Indianapolis area.",
     points: ["Quote capture flow", "City + service SEO pages", "Conversion-focused design"],
+    challenge: "Create a local-service website that makes it easy for homeowners to understand the cleanup options, find a page relevant to their city, and request a quote without calling around.",
+    solution: "Built a conversion-focused service site with a prominent quote flow, organized service navigation, and location-specific pages that can support local search visibility around Indianapolis.",
+    capabilities: ["Responsive service website", "Lead-generation quote flow", "Location landing-page system", "Local SEO structure", "Clear service navigation"],
+    result: "A site structured around the customer's next action: identify the job, choose the right service, and request a quote.",
   },
   {
     title: "Sponsored Fundraising",
@@ -46,6 +51,10 @@ const projects = [
     alt: "Sponsored Fundraising public website",
     copy: "A fundraising platform combining public campaign pages, sponsor-backed merchandise, charity workflows, and administrative tools.",
     points: ["Branded campaign pages", "Sponsor + charity workflows", "Admin management tools"],
+    challenge: "Turn a sponsor-funded shirt program into a repeatable digital experience for charities, sponsors, supporters, and the people running the program behind the scenes.",
+    solution: "Designed the public campaign experience alongside the operational side of the platform, including sponsor and charity workflows, campaign structure, storefront concepts, QR-connected journeys, and admin tooling.",
+    capabilities: ["Public marketing experience", "Campaign and storefront structure", "Sponsor + charity workflows", "Administrative dashboard", "QR-connected campaign flow"],
+    result: "One system that connects the public fundraising experience with the operational tools needed to manage campaigns.",
   },
   {
     title: "Warehouse Operations Platform",
@@ -55,6 +64,10 @@ const projects = [
     copy: "Internal software for inventory, intake, containers, marketplace listings, and day-to-day operational workflows in one system.",
     points: ["Inventory + intake", "Marketplace workflows", "Custom operational tooling"],
     privateWork: true,
+    challenge: "Replace disconnected warehouse tasks and manual marketplace work with a system that keeps inventory, intake, containers, listings, and operational workflows connected.",
+    solution: "Built custom internal software around the actual warehouse process instead of forcing the operation into a generic template. The platform supports intake, inventory, container workflows, marketplace management, and automation.",
+    capabilities: ["Inventory management", "Structured intake workflows", "Container tracking", "Marketplace listing tools", "Operational automation"],
+    result: "A centralized operations platform designed to reduce repeated manual work and make day-to-day warehouse activity easier to track.",
   },
 ];
 
@@ -108,21 +121,7 @@ export default function Home() {
           <h2>BUILT FOR<br/>REAL WORK.</h2>
           <p>From lead-generation websites to fundraising platforms and internal operations software, these projects show the range of problems Circle City Siteworks can solve.</p>
         </div>
-        <div className="projectGrid">
-          {projects.map((project, index) => <article className="projectCard" key={project.title}>
-            <div className="projectImageWrap">
-              <img src={project.image} alt={project.alt}/>
-              <span className="projectNumber">0{index + 1}</span>
-              {project.privateWork && <span className="projectPrivacy">Client details anonymized</span>}
-            </div>
-            <div className="projectBody">
-              <p className="projectType">{project.type}</p>
-              <h3>{project.title}</h3>
-              <p>{project.copy}</p>
-              <ul>{project.points.map((point)=><li key={point}>{point}</li>)}</ul>
-            </div>
-          </article>)}
-        </div>
+        <Portfolio projects={projects}/>
         <div className="workCta">
           <p>Need something that doesn't fit neatly into a template?</p>
           <a className="button" href="#quote">Tell Me What You Need</a>
