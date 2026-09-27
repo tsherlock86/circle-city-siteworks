@@ -108,11 +108,11 @@
 
 body.modalOpen{overflow:hidden}
 .caseStudyBackdrop{position:fixed;inset:0;z-index:1000;background:rgba(3,20,35,.82);display:grid;place-items:center;padding:28px;overflow:auto}
-.caseStudyModal{position:relative;width:min(1080px,100%);max-height:calc(100vh - 56px);overflow:auto;background:var(--cream);color:var(--ink);border:3px solid var(--navy);box-shadow:18px 18px 0 rgba(184,63,28,.72)}
+.caseStudyModal{position:relative;width:min(1180px,100%);max-height:calc(100vh - 56px);overflow:auto;background:var(--cream);color:var(--ink);border:3px solid var(--navy);box-shadow:18px 18px 0 rgba(184,63,28,.72)}
 .caseStudyClose{position:absolute;right:14px;top:14px;z-index:3;width:44px;height:44px;border:0;background:var(--navy);color:#fff;font-size:30px;line-height:1;cursor:pointer}
 .caseStudyClose:hover{background:var(--rust)}
-.caseStudyHero{position:relative;aspect-ratio:16/7;overflow:hidden;background:#d8dee3;border-bottom:7px solid var(--rust)}
-.caseStudyHero img{width:100%;height:100%;object-fit:cover;display:block}
+.caseStudyHero{position:relative;aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:7px solid var(--rust)}
+.caseStudyHero img{width:100%;height:100%;object-fit:contain;display:block}
 .caseStudyPrivacy{position:absolute;right:18px;bottom:18px;background:rgba(4,31,55,.94);color:#fff;padding:8px 11px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .caseStudyContent{padding:38px 42px 42px}
 .caseStudyContent h2{font-family:"Barlow Condensed";font-size:58px;line-height:.9;color:var(--navy);text-transform:uppercase;margin:10px 0 14px}
