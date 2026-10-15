@@ -463,3 +463,115 @@ body.modalOpen{overflow:hidden}
   .launchBlueprint{opacity:.2}
   .launchArc{width:220px;height:220px;right:-100px;bottom:-100px}
 }
+
+
+/* Launch poster polish */
+.launchReveal{width:100%}
+.launchTopline{width:100%;margin-bottom:14px}
+.launchPlanWide{
+  width:100%;
+  min-height:565px;
+  grid-template-columns:43% 57%;
+  border-width:2px;
+  box-shadow:12px 12px 0 var(--rust);
+}
+.launchPoster{
+  min-height:565px;
+  padding:46px 46px 38px;
+}
+.launchPosterContent{max-width:100%}
+.launchPoster h3{
+  font-size:62px;
+  line-height:.92;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  margin-top:12px;
+}
+.launchUnderline{
+  width:82%;
+  max-width:360px;
+  height:4px;
+  margin-bottom:20px;
+}
+.launchPitch{
+  max-width:430px;
+  font-size:19px!important;
+  line-height:1.5!important;
+}
+.launchBlueprint{
+  width:215px;
+  height:215px;
+  right:-30px;
+  top:74px;
+  opacity:.16;
+  background-size:32px 32px;
+}
+.launchBlueprint:before{inset:34px 46px 62px 28px}
+.launchBlueprint:after{width:66px;height:66px;right:20px;bottom:10px}
+.launchArc{
+  width:250px;
+  height:250px;
+  right:-145px;
+  bottom:-142px;
+  border-width:28px;
+  opacity:.88;
+}
+.launchPriceBlock{margin:34px 0 0}
+.launchPrice{
+  font-size:118px;
+  line-height:.84;
+}
+.launchPrice span{font-size:48px;top:8px}
+.launchPriceBurst{display:none}
+.launchPoster small{margin:12px 0 28px}
+.launchCta{
+  min-height:56px;
+  font-size:14px;
+  letter-spacing:.04em;
+}
+
+.launchFeaturesWide{
+  min-height:565px;
+  padding:42px 42px 34px;
+}
+.launchFeatureHeading{margin-bottom:18px}
+.launchFeatureTitle{
+  font-size:36px;
+  line-height:.95;
+  white-space:nowrap;
+}
+.launchFeatureHeading>span{
+  width:74%;
+  height:3px;
+  margin-top:9px;
+}
+.launchFeatureGrid{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  column-gap:28px;
+}
+.launchFeature{
+  min-height:58px;
+  padding:13px 2px;
+  font-size:15px;
+  line-height:1.35;
+}
+.launchFeature .check{flex-basis:21px;width:21px;height:21px}
+.launchScope{
+  margin-top:24px;
+  padding:20px 22px;
+}
+.launchScope strong{font-size:13px}
+.launchScope span{font-size:13px;line-height:1.55}
+
+@media(max-width:1080px){
+  .launchPoster h3{font-size:54px}
+  .launchFeatureTitle{font-size:31px}
+  .launchPlanWide{grid-template-columns:44% 56%}
+}
+@media(max-width:900px){
+  .launchPlanWide{grid-template-columns:1fr}
+  .launchPoster,.launchFeaturesWide{min-height:auto}
+  .launchPoster h3,.launchFeatureTitle{white-space:normal}
+  .launchBlueprint{right:-40px;top:40px}
+  .launchArc{right:-130px;bottom:-130px}
+}
