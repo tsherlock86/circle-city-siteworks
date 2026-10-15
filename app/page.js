@@ -1,5 +1,6 @@
 import QuoteForm from "./QuoteForm";
 import Portfolio from "./Portfolio";
+import Pricing from "./Pricing";
 
 const Check = () => <span className="check">✓</span>;
 
@@ -168,13 +169,7 @@ export default function Home() {
       <div className="wrap">
         <p className="eyebrow">Simple starting points</p>
         <div className="sectionHead"><h2>START WHERE<br/>YOU NEED.</h2><p>No confusing page-count ladder. We scope the project around what your business actually needs.</p></div>
-        <div className="plans">{plans.map((p) => <article className={"plan "+(p.popular?"featured":"")} key={p.title}>
-          {p.popular && <div className="popular">Most Popular</div>}
-          <div className="planIcon">{p.icon}</div><h3>{p.title}</h3><p className="kicker">{p.kicker}</p>
-          {p.prefix && <small>{p.prefix}</small>}<div className="price">{p.price}</div>
-          <ul>{p.items.map(i=><li key={i}><Check/>{i}</li>)}</ul>
-          <a href="#quote" className={p.popular?"button full":"outline full"}>Get a Quote</a>
-        </article>)}</div>
+        <Pricing plans={plans}/>
       </div>
     </section>
 
