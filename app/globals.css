@@ -178,3 +178,55 @@ body.modalOpen{overflow:hidden}
   .legalContent{padding:52px 0 72px}
   .legalFooter .wrap{align-items:flex-start;flex-direction:column}
 }
+
+
+/* $299 launch-package switcher */
+.pricingSwitcher{display:grid;gap:34px}
+.budgetPrompt{margin-top:8px;padding:24px 26px;border:2px solid var(--navy);background:rgba(244,239,229,.88);display:flex;align-items:center;justify-content:space-between;gap:28px;box-shadow:8px 8px 0 rgba(184,63,28,.22)}
+.budgetPrompt>div{max-width:760px}
+.budgetEyebrow{margin:0 0 6px;color:var(--rust);font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.budgetPrompt h3{font-family:"Barlow Condensed";font-size:34px;line-height:1;text-transform:uppercase;color:var(--navy);margin:0 0 8px}
+.budgetPrompt p:not(.budgetEyebrow){margin:0;line-height:1.55}
+.budgetButton{flex:0 0 auto;border:0;background:var(--navy);color:#fff;padding:15px 18px;font:inherit;font-weight:800;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;display:inline-flex;align-items:center;gap:12px}
+.budgetButton span{font-size:20px;line-height:1}
+.budgetButton:hover{background:var(--rust)}
+.budgetButton:focus-visible,.launchBack:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+
+.launchReveal{animation:launchReveal .25s ease both}
+@keyframes launchReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.launchTopline{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:18px}
+.launchBadge{display:inline-flex;background:var(--rust);color:#fff;padding:8px 11px;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.launchBack{border:0;background:transparent;color:var(--navy);font:inherit;font-weight:800;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.launchPlan{display:grid;grid-template-columns:.85fr 1.15fr;border:3px solid var(--navy);background:var(--cream);box-shadow:14px 14px 0 var(--rust);overflow:hidden}
+.launchPlanIntro{padding:42px;background:var(--navy);color:#fff;display:flex;flex-direction:column}
+.launchMini{margin:0;color:#f0b29c;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.launchPlanIntro h3{font-family:"Barlow Condensed";font-size:56px;line-height:.9;text-transform:uppercase;margin:10px 0 14px;color:#fff}
+.launchPlanIntro>p:not(.launchMini){font-size:18px;line-height:1.55;color:rgba(255,255,255,.82);margin:0}
+.launchPrice{font-family:"Barlow Condensed";font-size:96px;line-height:.9;font-weight:900;color:#fff;margin:28px 0 0;letter-spacing:-.03em}
+.launchPrice span{font-size:42px;vertical-align:top;position:relative;top:8px;margin-right:2px;color:#f0b29c}
+.launchPlanIntro small{display:block;margin:7px 0 24px;color:rgba(255,255,255,.65);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.launchCta{margin-top:auto;background:var(--rust)}
+.launchCta:hover{background:#d54b23}
+
+.launchFeatures{padding:40px 42px;display:flex;flex-direction:column}
+.launchFeatureTitle{margin:0 0 20px;color:var(--navy);font-family:"Barlow Condensed";font-size:28px;font-weight:900;text-transform:uppercase}
+.launchFeatureGrid{display:grid;grid-template-columns:1fr 1fr;gap:2px 22px}
+.launchFeature{display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);font-weight:700;line-height:1.35}
+.launchFeature .check{margin-top:1px}
+.launchScope{margin-top:26px;padding:18px 20px;background:#e9e1d4;border-left:5px solid var(--rust);display:grid;gap:6px}
+.launchScope strong{color:var(--navy);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.launchScope span{font-size:14px;line-height:1.55}
+
+@media(max-width:850px){
+  .budgetPrompt{align-items:flex-start;flex-direction:column}
+  .budgetButton{width:100%;justify-content:space-between}
+  .launchPlan{grid-template-columns:1fr;box-shadow:8px 8px 0 var(--rust)}
+  .launchPlanIntro{padding:32px}
+  .launchFeatures{padding:30px}
+}
+@media(max-width:560px){
+  .launchTopline{align-items:flex-start;flex-direction:column}
+  .launchFeatureGrid{grid-template-columns:1fr}
+  .launchPlanIntro h3{font-size:44px}
+  .launchPrice{font-size:78px}
+}
