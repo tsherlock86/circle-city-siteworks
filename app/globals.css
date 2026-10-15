@@ -575,3 +575,66 @@ body.modalOpen{overflow:hidden}
   .launchBlueprint{right:-40px;top:40px}
   .launchArc{right:-130px;bottom:-130px}
 }
+
+
+/* Premium launch-package showcase */
+.launchTopline{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:20px}
+.launchTopCopy{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.launchHandNote{font-family:"Caveat","Segoe Print","Bradley Hand",cursive;font-size:28px;line-height:1;color:var(--navy);transform:rotate(-1.5deg)}
+.launchShowcase{display:grid;grid-template-columns:46% 54%;min-height:590px;border:2px solid var(--navy);background:var(--cream);box-shadow:14px 14px 0 var(--rust);overflow:hidden}
+.launchShowcaseLeft{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:48px 50px 40px}
+.launchShowcaseCopy{position:relative;z-index:3;height:100%;display:flex;flex-direction:column}
+.launchShowcaseLeft .launchMini{margin:0 0 12px;color:#f0b29c}
+.launchShowcaseLeft h3{margin:0;font-family:"Barlow Condensed";font-size:76px;line-height:.78;text-transform:uppercase;color:#fff;letter-spacing:-.02em}
+.launchShowcaseLeft h3:after{content:"";display:block;width:72%;height:5px;background:var(--rust);margin:12px 0 18px;transform:rotate(-1.2deg);border-radius:50%}
+.launchShowcaseLeft .launchPitch{max-width:430px;margin:0;color:rgba(255,255,255,.82)!important;font-size:18px!important;line-height:1.5!important}
+.launchPriceWrap{position:relative;width:max-content;margin:28px 0 0;padding-top:15px}
+.launchFrom{position:absolute;left:-4px;top:0;font-family:"Caveat","Segoe Print","Bradley Hand",cursive;font-size:31px;color:#f3c763;transform:rotate(-7deg)}
+.launchShowcaseLeft .launchPrice{margin:0;font-size:124px;line-height:.82;letter-spacing:-.05em;color:#fff}
+.launchShowcaseLeft .launchPrice span{font-size:50px;color:#f0b29c;top:7px}
+.launchPriceLine{display:block;position:absolute;left:58px;right:-8px;bottom:-7px;height:5px;background:#f3c763;transform:rotate(-2deg);border-radius:50%}
+.launchSmallNote{margin:14px 0 24px;font-size:11px!important;text-transform:uppercase;letter-spacing:.11em;color:rgba(255,255,255,.58)!important}
+.launchShowcaseLeft .launchCta{display:flex;width:100%;align-items:center;justify-content:center;gap:13px;min-height:58px;margin-top:auto;background:var(--rust);font-size:14px;box-shadow:none}
+.launchShowcaseLeft .launchCta:hover{background:#d54b23}
+.launchScriptNote{margin:16px auto 0;font-family:"Caveat","Segoe Print","Bradley Hand",cursive;font-size:25px;color:#f6d2c3;letter-spacing:.01em;transform:rotate(-1deg)}
+.launchBlueprint{position:absolute;right:-55px;top:24px;width:275px;height:245px;opacity:.16;transform:rotate(5deg);background:linear-gradient(rgba(35,125,182,.85) 2px,transparent 2px),linear-gradient(90deg,rgba(35,125,182,.85) 2px,transparent 2px);background-size:35px 35px}
+.launchBlueprint:before,.launchBlueprint:after{content:"";position:absolute;border:3px solid rgba(35,125,182,.72)}
+.launchBlueprint:before{inset:34px 58px 76px 24px;transform:rotate(25deg)}
+.launchBlueprint:after{width:78px;height:78px;border-radius:50%;right:20px;bottom:10px}
+.launchArc{position:absolute;right:-125px;bottom:-125px;width:300px;height:300px;border:38px solid rgba(184,63,28,.96);border-radius:50%;z-index:1}
+.launchCornerMark{position:absolute;left:24px;bottom:18px;font-family:monospace;font-size:28px;color:rgba(35,125,182,.55);z-index:2}
+
+.launchShowcaseRight{display:flex;flex-direction:column;padding:46px 44px 34px;background:linear-gradient(180deg,rgba(255,252,245,.98),rgba(244,239,229,.98))}
+.launchFeatureHeading{margin-bottom:24px}
+.launchFeatureKicker{display:block;color:var(--rust);font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px}
+.launchFeatureHeading h4{margin:0;font-family:"Barlow Condensed";font-size:42px;line-height:.92;text-transform:uppercase;color:var(--navy)}
+.launchFeatureRule{display:block;width:68%;height:4px;background:var(--rust);margin-top:10px;transform:rotate(-.7deg);border-radius:50%}
+.launchFeatureGridCards{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.launchFeatureCard{min-height:66px;padding:14px 14px;display:flex;align-items:flex-start;gap:11px;background:rgba(255,255,255,.54);border:1px solid rgba(6,45,80,.14);box-shadow:0 4px 12px rgba(6,45,80,.04);font-size:15px;font-weight:700;line-height:1.3}
+.launchFeatureCard .check{flex:0 0 22px;width:22px;height:22px;margin-top:0}
+.launchScopeFancy{margin-top:auto;padding:20px 22px;background:#e9e1d4;border-left:5px solid var(--rust);display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start}
+.launchScopeFancy>div{display:grid;gap:5px}
+.launchScopeLabel{font-family:"Caveat","Segoe Print","Bradley Hand",cursive;font-size:23px;color:var(--rust);line-height:1;transform:rotate(-1deg)}
+.launchScopeFancy strong{font-size:14px;color:var(--navy);text-transform:uppercase;letter-spacing:.04em}
+.launchScopeFancy p{margin:0;font-size:13px;line-height:1.5;color:#415267}
+
+@media(max-width:980px){
+  .launchShowcase{grid-template-columns:1fr}
+  .launchShowcaseLeft,.launchShowcaseRight{min-height:auto}
+  .launchShowcaseLeft{padding:40px}
+  .launchShowcaseRight{padding:36px}
+  .launchShowcaseLeft h3{font-size:66px}
+}
+@media(max-width:650px){
+  .launchTopline{align-items:flex-start;flex-direction:column}
+  .launchHandNote{font-size:23px}
+  .launchShowcaseLeft{padding:32px 24px 28px}
+  .launchShowcaseRight{padding:30px 22px}
+  .launchShowcaseLeft h3{font-size:56px}
+  .launchShowcaseLeft .launchPrice{font-size:98px}
+  .launchFeatureHeading h4{font-size:34px}
+  .launchFeatureGridCards{grid-template-columns:1fr}
+  .launchScopeFancy{grid-template-columns:1fr}
+  .launchBlueprint{right:-100px;opacity:.1}
+  .launchArc{right:-155px;bottom:-155px}
+}
