@@ -79,18 +79,36 @@ export default function Pricing({ plans }) {
             </button>
           </div>
 
-          <article className="launchPlan">
-            <div className="launchPlanIntro">
-              <p className="launchMini">A focused starter option</p>
-              <h3>Launch Website</h3>
-              <p>For a small business that needs a real online presence without paying for features it does not need yet.</p>
-              <div className="launchPrice"><span>$</span>299</div>
-              <small>One-time project starting price</small>
-              <a className="button full launchCta" href="#quote">Start With the $299 Package</a>
+          <article className="launchPlan launchPlanWide">
+            <div className="launchPlanIntro launchPoster">
+              <div className="launchBlueprint" aria-hidden="true"></div>
+              <div className="launchArc" aria-hidden="true"></div>
+
+              <div className="launchPosterContent">
+                <p className="launchMini">A focused starter option</p>
+                <h3>Launch Website</h3>
+                <span className="launchUnderline" aria-hidden="true"></span>
+                <p className="launchPitch">For a small business that needs a real online presence without paying for features it does not need yet.</p>
+
+                <div className="launchPriceBlock">
+                  <div className="launchPrice"><span>$</span>299</div>
+                  <i className="launchPriceBurst left" aria-hidden="true"></i>
+                  <i className="launchPriceBurst right" aria-hidden="true"></i>
+                </div>
+                <small>One-time project starting price</small>
+
+                <a className="button full launchCta" href="#quote">
+                  Start With the $299 Package <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
 
-            <div className="launchFeatures">
-              <p className="launchFeatureTitle">Everything you need to launch</p>
+            <div className="launchFeatures launchFeaturesWide">
+              <div className="launchFeatureHeading">
+                <p className="launchFeatureTitle">Everything you need to launch</p>
+                <span aria-hidden="true"></span>
+              </div>
+
               <div className="launchFeatureGrid">
                 {launchItems.map((item) => (
                   <div className="launchFeature" key={item}>
