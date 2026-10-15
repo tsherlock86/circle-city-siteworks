@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const launchItems = [
   "Professional one-page business website",
@@ -17,9 +17,22 @@ const launchItems = [
 
 export default function Pricing({ plans }) {
   const [showLaunch, setShowLaunch] = useState(false);
+  const [switching, setSwitching] = useState(false);
+  const timerRef = useRef(null);
+
+  function switchPricing(next) {
+    if (switching || showLaunch === next) return;
+    setSwitching(true);
+    window.clearTimeout(timerRef.current);
+    timerRef.current = window.setTimeout(() => {
+      setShowLaunch(next);
+      requestAnimationFrame(() => setSwitching(false));
+    }, 220);
+  }
 
   return (
-    <div className="pricingSwitcher">
+    <div className={"pricingSwitcher " + (switching ? "pricingSwitching" : "")}>
+      <div className={"pricingView " + (switching ? "pricingViewExit" : "pricingViewEnter")}>
       {!showLaunch ? (
         <>
           <div className="plans">
@@ -46,23 +59,22 @@ export default function Pricing({ plans }) {
             ))}
           </div>
 
-          <div className="budgetPrompt">
-            <div>
-              <p className="budgetEyebrow">Need something simpler?</p>
-              <h3>Not finding something in your price range?</h3>
-              <p>We also offer a focused launch package for businesses that just need a clean, professional website to get started.</p>
-            </div>
-            <button type="button" className="budgetButton" onClick={() => setShowLaunch(true)}>
-              See the $299 Launch Package
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            className="launchScript"
+            onClick={() => switchPricing(true)}
+            aria-label="See the $299 Launch Package"
+          >
+            <span className="launchScriptTop">Not finding something in your price range?</span>
+            <span className="launchScriptBottom">Take a look at our <strong>$299 Launch Package</strong></span>
+            <span className="launchScriptArrow" aria-hidden="true">↝</span>
+          </button>
         </>
       ) : (
         <div className="launchReveal">
           <div className="launchTopline">
             <span className="launchBadge">Just getting started</span>
-            <button type="button" className="launchBack" onClick={() => setShowLaunch(false)}>
+            <button type="button" className="launchBack" onClick={() => switchPricing(false)}>
               ← Back to standard packages
             </button>
           </div>
@@ -96,6 +108,7 @@ export default function Pricing({ plans }) {
           </article>
         </div>
       )}
+      </div>
     </div>
   );
 }
