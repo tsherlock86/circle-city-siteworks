@@ -19,6 +19,7 @@ export default function Pricing({ plans }) {
   const [showLaunch, setShowLaunch] = useState(false);
   const [switching, setSwitching] = useState(false);
   const timerRef = useRef(null);
+  const pricingRef = useRef(null);
 
   function switchPricing(next) {
     if (switching || showLaunch === next) return;
@@ -26,12 +27,22 @@ export default function Pricing({ plans }) {
     window.clearTimeout(timerRef.current);
     timerRef.current = window.setTimeout(() => {
       setShowLaunch(next);
-      requestAnimationFrame(() => setSwitching(false));
+
+      requestAnimationFrame(() => {
+        setSwitching(false);
+
+        if (window.matchMedia("(max-width: 850px)").matches && pricingRef.current) {
+          requestAnimationFrame(() => {
+            const top = pricingRef.current.getBoundingClientRect().top + window.scrollY - 18;
+            window.scrollTo({ top, behavior: "smooth" });
+          });
+        }
+      });
     }, 220);
   }
 
   return (
-    <div className={"pricingSwitcher " + (switching ? "pricingSwitching" : "")}>
+    <div ref={pricingRef} className={"pricingSwitcher " + (switching ? "pricingSwitching" : "")}>
       <div className={"pricingView " + (switching ? "pricingViewExit" : "pricingViewEnter")}>
       {!showLaunch ? (
         <>
